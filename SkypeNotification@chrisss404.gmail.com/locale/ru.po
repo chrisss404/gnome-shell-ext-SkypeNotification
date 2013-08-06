@@ -1,0 +1,136 @@
+# Russian translations for SkypeNotification@chrisss package
+# Английские переводы для пакета SkypeNotification@chrisss.
+# Copyright (C) 2013 THE SkypeNotification@chrisss'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the SkypeNotification@chrisss package.
+# Alexey Kharlamov <derlafff@ya.ru>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SkypeNotification@chrisss 404.gmail.com\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-06 16:13+0400\n"
+"PO-Revision-Date: 2013-08-06 16:14+0400\n"
+"Last-Translator: Alexey Kharlamov <derlafff@ya.ru>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../skypeMenuButton.js:47
+msgid "Recent Chats"
+msgstr "Последние беседы"
+
+#: ../skypeMenuButton.js:49
+msgid "Change Status"
+msgstr "Изменить статус"
+
+#: ../skypeMenuButton.js:51
+msgid "Online"
+msgstr "В сети"
+
+#: ../skypeMenuButton.js:55
+msgid "Away"
+msgstr "Нет на месте"
+
+#: ../skypeMenuButton.js:59
+msgid "Do Not Disturb"
+msgstr "Не беспокоить"
+
+#: ../skypeMenuButton.js:63
+msgid "Invisible"
+msgstr "Невидимый"
+
+#: ../skypeMenuButton.js:67
+msgid "Offline"
+msgstr "Не в сети"
+
+#: ../skypeMenuButton.js:71
+msgid "Show Contact List"
+msgstr "Показать список контактов"
+
+#: ../skypeMenuButton.js:74
+msgid "Add a Contact"
+msgstr "Добавить контакт"
+
+#: ../skypeMenuButton.js:77
+msgid "Quit"
+msgstr "Выход"
+
+#: ../skypeConfig.js:48
+msgid "Voicemail Received"
+msgstr "Новое голосовое сообщение"
+
+#: ../skypeConfig.js:51
+msgid "Voicemail Sent"
+msgstr "Голосовое сообщение отправлено"
+
+#: ../skypeConfig.js:54
+msgid "{contact} has appeared online"
+msgstr "{contact} появился в сети"
+
+#: ../skypeConfig.js:57
+msgid "{contact} has gone offline"
+msgstr "{contact} вышел из сети"
+
+#: ../skypeConfig.js:60
+msgid "Contact request from {contact}"
+msgstr "Запрос авторизации от {contact}"
+
+#: ../skypeConfig.js:63
+msgid "{contact} has been added to your contact list"
+msgstr "{contact} был добавлен в список контактов"
+
+#: ../skypeConfig.js:66
+msgid "{contact} has been deleted from your contact list"
+msgstr "{contact} был удален из вашего списка контактов"
+
+#: ../skypeConfig.js:78
+msgid "{contact} joined chat"
+msgstr "{contact} вошел в чат"
+
+#: ../skypeConfig.js:81
+msgid "{contact} left chat"
+msgstr "{contact} вышел из чата"
+
+#: ../skypeConfig.js:84
+msgid "Incoming file from {contact}"
+msgstr "Входящий файл от {contact}"
+
+#: ../skypeConfig.js:87
+msgid "Transfer Complete"
+msgstr "Передача завершена"
+
+#: ../skypeConfig.js:87
+msgid "{filename} saved to {filepath}"
+msgstr "{filename} сохранен в {filepath}"
+
+#: ../skypeConfig.js:90
+msgid "Transfer Failed"
+msgstr "Передача не удалась"
+
+#: ../skypeConfig.js:93
+msgid "SMS Sent"
+msgstr "SMS отправлено"
+
+#: ../skypeConfig.js:96
+msgid "SMS Failed"
+msgstr "SMS не отправлено"
+
+#: ../skypeConfig.js:99
+msgid "{contact} has a birthday tomorrow"
+msgstr "Завтра день рождения {contact}"
+
+#: ../skypeConfig.js:102
+msgid "Happy Birthday {contact}"
+msgstr "Сегодня день рождения {contact}"
+
+#: ../prefs.js:66
+msgid "Show top bar icon"
+msgstr "Показывать иконку в верхней панели"
+
+#: ../prefs.js:77 ../prefs.js:78
+msgid "Shall the top bar icon be displayed"
+msgstr "Показывать иконку в верхней панели"
