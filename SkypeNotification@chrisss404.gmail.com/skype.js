@@ -94,6 +94,9 @@ const Skype = new Lang.Class({
 
         this._settings = null;
         this._settingsSignal = null;
+
+        this._userPresenceCallbacks = [];
+        this._addUserPresenceCallback(Lang.bind(this, this._setUserPresenceMenuIcon));
     },
 
     _initSettings: function() {
@@ -116,7 +119,7 @@ const Skype = new Lang.Class({
 
         if(this._skypeMenuEnabled && this._skypeMenu == null) {
             this._skypeMenu = new SkypeMenuButton(this);
-            this._setUserPresenceMenuIcon();
+            this._runUserPresenceCallbacks();
             Main.panel.addToStatusArea("skypeMenu", this._skypeMenu);
             this._missedChat();
         }
@@ -173,12 +176,12 @@ const Skype = new Lang.Class({
         if(this._missedChats !== "CHATS ") {
             if(!this._skypeMenuAlert) {
                 this._skypeMenuAlert = true;
-                this._setUserPresenceMenuIcon();
+                this._runUserPresenceCallbacks();
             }
         } else {
             if(this._skypeMenuAlert) {
                 this._skypeMenuAlert = false;
-                this._setUserPresenceMenuIcon();
+                this._runUserPresenceCallbacks();
             }
         }
         if(this._enabled && this._skypeMenuEnabled) {
@@ -420,6 +423,29 @@ const Skype = new Lang.Class({
         return results;
     },
 
+    _getCurrentPresence: function() {
+        return this._currentPresence;
+    },
+
+    _addUserPresenceCallback: function(callback) {
+        if(this._userPresenceCallbacks.indexOf(callback) === -1) {
+            this._userPresenceCallbacks.push(callback);
+        }
+    },
+
+    _removeUserPresenceCallback: function(callback) {
+        let idx = this._userPresenceCallbacks.indexOf(callback);
+        if(idx !== -1) {
+            this._userPresenceCallbacks.splice(idx, 1);
+        }
+    },
+
+    _runUserPresenceCallbacks: function() {
+        for(let i = 0; i < this._userPresenceCallbacks.length; ++i) {
+            this._userPresenceCallbacks[i](this._currentPresence);
+        }
+    },
+
     _setUserPresenceMenuIcon: function() {
         if(!this._skypeMenuEnabled || this._skypeMenu == null) {
             return;
@@ -477,13 +503,13 @@ const Skype = new Lang.Class({
             let user = message.split(" ");
             if(user[2] == "ONLINESTATUS" && user[1] == this._currentUserHandle) {
                 this._currentPresence = user[3];
-                this._setUserPresenceMenuIcon();
+                this._runUserPresenceCallbacks();
             } else if(user[2] == "BUDDYSTATUS") {
                 this._searchProvider.setContacts(this._getContacts());
             }
         } else if(message.indexOf("USERSTATUS ") !== -1) {
             this._currentPresence = message.split(" ")[1];
-            this._setUserPresenceMenuIcon();
+            this._runUserPresenceCallbacks();
         } 
     },
 

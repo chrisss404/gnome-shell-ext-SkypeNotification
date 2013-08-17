@@ -43,11 +43,13 @@ const SkypeMenuButton = new Lang.Class({
         this._focusSkypeMainWindow = Lang.bind(skype, skype._focusSkypeMainWindow);
         this._focusSkypeChatWindow = Lang.bind(skype, skype._focusSkypeChatWindow);
         this._focusSkypeAddFriendWindow = Lang.bind(skype, skype._focusSkypeAddFriendWindow);
+        this._getCurrentPresence = Lang.bind(skype, skype._getCurrentPresence);
 
         this._recentChatsSection = new PopupMenu.PopupSubMenuMenuItem(_("Recent Chats"));
 
         let changeStatusSection = new PopupMenu.PopupSubMenuMenuItem(_("Change Status"));
-
+        changeStatusSection.connect("open-state-changed", Lang.bind(this, this._updateStatusDots));
+        
         let changeStatusOnline = new PopupMenu.PopupMenuItem(_("Online"));
         changeStatusOnline.connect("activate", Lang.bind(this, this._changeStatusOnline));
         changeStatusSection.menu.addMenuItem(changeStatusOnline);
@@ -68,6 +70,16 @@ const SkypeMenuButton = new Lang.Class({
         changeStatusOffline.connect("activate", Lang.bind(this, this._changeStatusOffline));
         changeStatusSection.menu.addMenuItem(changeStatusOffline);
 
+        this._statusMenuItems = {
+            'ONLINE': changeStatusOnline,
+            'AWAY': changeStatusAway,
+            'DND': changeStatusDnd,
+            'INVISIBLE': changeStatusInvisible,
+            'OFFLINE': changeStatusOffline
+        };
+
+        skype._addUserPresenceCallback(Lang.bind(this, this._updateStatusDots));
+
         let showContactList = new PopupMenu.PopupMenuItem(_("Show Contact List"));
         showContactList.connect("activate", Lang.bind(this, this._openContactList));
 
@@ -87,6 +99,7 @@ const SkypeMenuButton = new Lang.Class({
         this.menu.addMenuItem(quit);
 
         this.menu.connect("open-state-changed", Lang.bind(this, this._updateRecentChats));
+        this.menu.connect("open-state-changed", Lang.bind(this, this._updateStatusDots));
     },
 
     _updateRecentChats: function(event) {
@@ -100,6 +113,16 @@ const SkypeMenuButton = new Lang.Class({
                 chatItem.connect("activate", Lang.bind(this, this._openChat));
                 this._recentChatsSection.menu.addMenuItem(chatItem);
             }
+        }
+    },
+
+    _updateStatusDots: function() {
+        let curStatus = this._getCurrentPresence();
+        for(status in this._statusMenuItems) {
+            let checked = status === curStatus;
+            let menuItem = this._statusMenuItems[status];
+
+            menuItem.setShowDot(checked);
         }
     },
 
