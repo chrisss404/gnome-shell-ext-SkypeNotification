@@ -74,6 +74,9 @@ const SkypeMenuButton = new Lang.Class({
         let addContact = new PopupMenu.PopupMenuItem(_("Add a Contact"));
         addContact.connect("activate", Lang.bind(this, this._openAddContact));
 
+        this._muteSwitch = new PopupMenu.PopupSwitchMenuItem(_("Mute Microphone"));
+        this._muteSwitch.connect("toggled", Lang.bind(this, this._toggleMute));
+
         let quit = new PopupMenu.PopupMenuItem(_("Quit"));
         quit.connect("activate", Lang.bind(this, this._quit));
 
@@ -84,9 +87,12 @@ const SkypeMenuButton = new Lang.Class({
         this.menu.addMenuItem(showContactList);
         this.menu.addMenuItem(addContact);
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+        this.menu.addMenuItem(this._muteSwitch);
+        this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
         this.menu.addMenuItem(quit);
 
         this.menu.connect("open-state-changed", Lang.bind(this, this._updateRecentChats));
+        this.menu.connect("open-state-changed", Lang.bind(this, this._updateMuteSwitch));
     },
 
     _updateRecentChats: function(event) {
@@ -103,9 +109,9 @@ const SkypeMenuButton = new Lang.Class({
         }
     },
 
-    _openChat: function(event) {
+    _openChat: function(actor) {
         if(this._proxy != null) {
-            this._proxy.InvokeRemote("OPEN CHAT " + event.chatId);
+            this._proxy.InvokeRemote("OPEN CHAT " + actor.chatId);
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, 200, Lang.bind(this, this._focusSkypeChatWindow));
         }
     },
@@ -150,6 +156,25 @@ const SkypeMenuButton = new Lang.Class({
             this._proxy.InvokeRemote("OPEN ADDAFRIEND");
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, 200, Lang.bind(this, this._focusSkypeAddFriendWindow));
         }
+    },
+
+    _getMute: function() {
+        let result = this._proxy.InvokeSync("GET MUTE").toString();
+        return result.indexOf("OFF") == -1;
+    }, 
+
+    _setMute: function(value) {
+        this._proxy.InvokeSync("SET MUTE " + value);
+    },
+
+    _updateMuteSwitch: function(actor) {
+        if(actor.isOpen)
+            this._muteSwitch.setToggleState(this._getMute());
+    },
+
+    _toggleMute: function(actor) {
+        this._setMute(actor.state ? "ON" : "OFF");
+        GLib.timeout_add(GLib.PRIORITY_DEFAULT, 500, Lang.bind(this, this._updateMuteSwitch, this.menu));
     },
 
     _quit: function() {
