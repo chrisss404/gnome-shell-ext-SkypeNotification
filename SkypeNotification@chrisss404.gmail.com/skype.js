@@ -37,36 +37,30 @@ const SkypeMenuButton = Me.imports.skypeMenuButton.SkypeMenuButton;
 const SkypeSearchProvider = Me.imports.skypeSearchProvider.SkypeSearchProvider;
 
 
-const SkypeIface = '<node> \
-<interface name="com.Skype.API"> \
-<method name="Invoke"> \
-    <arg type="s" direction="in"/> \
-    <arg type="s" direction="out"/> \
-</method> \
-</interface> \
-</node>';
+const SkypeIface = <interface name="com.Skype.API">
+<method name="Invoke">
+    <arg type="s" direction="in"/>
+    <arg type="s" direction="out"/>
+</method>
+</interface>;
 
-const SkypeIfaceClient = '<node> \
-<interface name="com.Skype.API.Client"> \
-<method name="Notify"> \
-    <arg type="s" direction="in"/> \
-</method> \
-</interface> \
-</node>';
+const SkypeIfaceClient = <interface name="com.Skype.API.Client">
+<method name="Notify">
+    <arg type="s" direction="in"/>
+</method>
+</interface>;
 
-const SkypeIfaceExtension = '<node> \
-<interface name="com.Skype.API.Extension"> \
-<method name="Notify"> \
-    <arg type="s" direction="in" name="type"/> \
-    <arg type="s" direction="in" name="sname"/> \
-    <arg type="s" direction="in" name="sskype"/> \
-    <arg type="s" direction="in" name="smessage"/> \
-    <arg type="s" direction="in" name="fpath"/> \
-    <arg type="s" direction="in" name="fsize"/> \
-    <arg type="s" direction="in" name="fname"/> \
-</method> \
-</interface> \
-</node>';
+const SkypeIfaceExtension = <interface name="com.Skype.API.Extension">
+<method name="Notify">
+    <arg type="s" direction="in" name="type"/>
+    <arg type="s" direction="in" name="sname"/>
+    <arg type="s" direction="in" name="sskype"/>
+    <arg type="s" direction="in" name="smessage"/>
+    <arg type="s" direction="in" name="fpath"/>
+    <arg type="s" direction="in" name="fsize"/>
+    <arg type="s" direction="in" name="fname"/>
+</method>
+</interface>;
 
 const SkypeProxy = Gio.DBusProxy.makeProxyWrapper(SkypeIface);
 
@@ -250,12 +244,12 @@ const Skype = new Lang.Class({
 
     _updateNotifySource: function() {
         let source = null;
-        let items = Main.messageTray.getSources();
+        let items = Main.messageTray.getSummaryItems();
 
         let item = null;
         let numberOfNotifications = -1;
         for(let index in items) {
-            item = items[index];
+            item = items[index].source;
             if(item.title == "Skype") {
                 if(item.count > numberOfNotifications) {
                     source = item;
@@ -338,7 +332,7 @@ const Skype = new Lang.Class({
         }
         body = body.join("").trim();
 
-        let params = { "gicon": Gio.icon_new_for_string(icon) };
+        let params = { };
         if(this._notificationSource.count == 0) {
             this._activeNotification = new MessageTray.Notification(this._notificationSource, 
                     summary, body, params);

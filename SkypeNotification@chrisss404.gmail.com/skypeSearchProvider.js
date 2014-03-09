@@ -22,10 +22,7 @@
 const Lang = imports.lang;
 
 const GLib = imports.gi.GLib;
-const Shell = imports.gi.Shell;
 const St = imports.gi.St
-
-const Util = imports.misc.util;
 
 const IconGrid = imports.ui.iconGrid;
 const Main = imports.ui.main;
@@ -36,8 +33,7 @@ const SkypeSearchProvider = new Lang.Class({
     Name: "SkypeSearchProvider",
 
     _init: function(title, skype) {
-        this.id = title;
-        this.appInfo = Shell.AppSystem.get_default().lookup_app('skype.desktop').get_app_info();
+        this.title = title;
 
         this._proxy = skype._proxy;
         this._focusSkypeMainWindow = Lang.bind(skype, skype._focusSkypeMainWindow);
@@ -62,7 +58,7 @@ const SkypeSearchProvider = new Lang.Class({
         callback(metas);
     },
 
-    _search: function(haystack, needles, callback) {
+    _search: function(haystack, needles) {
         if(haystack.length == 0) {
             return;
         }
@@ -91,51 +87,51 @@ const SkypeSearchProvider = new Lang.Class({
             result = result.concat(tmp[i]);
         }
 
-        if(typeof this.searchSystem === "object") {
-            //Gnome 3.8
-            if(typeof this.searchSystem.pushResults === "function") {
-                this.searchSystem.pushResults(this, result);
-            }
-            //Gnome 3.10
-            if(typeof this.searchSystem.setResults === "function") {
-                this.searchSystem.setResults(this, result);
-            }
-        }
-        
-        //Gnome 3.12
-        if(typeof callback === "function") {
-            callback(result);
-        }
+        this.searchSystem.pushResults(this, result);
     },
 
     filterResults: function(results, maxNumber) {
         return results.slice(0, maxNumber);
     },
 
-    getInitialResultSet: function(terms, callback, cancelable) {
-        this._search(this._contacts, terms, callback);
+    getInitialResultSet: function(terms) {
+        this._search(this._contacts, terms);
     },
 
-    getSubsearchResultSet: function(previousResults, terms, callback, cancelable) {
-        this._search(this._contacts, terms, callback);
+    getSubsearchResultSet: function(previousResults, terms) {
+        this._search(this._contacts, terms);
+    },
+
+    createResultActor: function(resultMeta, terms) {
+        let actor = new St.Button({ style_class: "app-well-app app-folder",
+            button_mask: St.ButtonMask.ONE,
+            toggle_mode: true,
+            can_focus: true,
+            x_fill: true,
+            y_fill: true });
+
+        let icon = new IconGrid.BaseIcon(resultMeta["name"],
+                 { createIcon: Lang.bind(this, this._createIcon) });
+        actor.id = resultMeta["id"];
+        actor.set_child(icon.actor);
+        actor.label_actor = icon.label;
+        actor.connect("clicked", Lang.bind(this, this.activateResult));
+
+        return actor;
     },
 
     _createIcon: function(size) {
         return new St.Icon({ icon_name: "skype",
-            icon_size: size });
+            icon_size: size,
+            style_class: "app-well-app",
+            track_hover: true });
     },
 
     activateResult: function(event) {
-        if(this._contacts[event]) {
-            this._proxy.InvokeRemote("OPEN IM " + this._contacts[event].handle);
+        if(this._contacts[event.id]) {
+            this._proxy.InvokeRemote("OPEN IM " + this._contacts[event.id].handle);
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, 200, Lang.bind(this, this._focusSkypeChatWindow));
             Main.overview.hide();
         }
-    },
-
-    launchSearch: function(terms) {
-        Util.spawn(["skype"]);
-        GLib.timeout_add(GLib.PRIORITY_DEFAULT, 200, Lang.bind(this, this._focusSkypeMainWindow));
-        Main.overview.hide();
     }
 });
