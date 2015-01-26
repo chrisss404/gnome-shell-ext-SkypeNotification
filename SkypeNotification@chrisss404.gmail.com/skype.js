@@ -603,7 +603,7 @@ const Skype = new Lang.Class({
 
             if(this._searchProvider == null) {
                 this._searchProvider = new SkypeSearchProvider("SKYPE", this);
-                Main.overview.viewSelector._searchResults._searchSystem.addProvider(this._searchProvider);
+                Main.overview.addSearchProvider(this._searchProvider);
             }
             this._searchProvider.setContacts(this._getContacts());
         } else if(message.indexOf("USER ") !== -1) {
