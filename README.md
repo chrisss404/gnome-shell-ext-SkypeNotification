@@ -19,7 +19,7 @@ This extension simplifies the life for Microsoft Skype users. It makes use of th
 There are two possibilities:
 
 - Visit the [Skype Integration page](https://extensions.gnome.org/extension/696/skype-integration/) on extensions.gnome.org, click on the switch ("OFF" => "ON"), click on the install button.
-- Or, download the source ([3.6](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.6.zip), [3.8](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.8.zip), [3.10](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.10.zip), [3.12, 3.14](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/master.zip)), copy the folder `SkypeNotification@chrisss404.gmail.com` from the downloaded archive to `~/.local/share/gnome-shell/extensions/`, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
+- Or, download the source ([3.6](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.6.zip), [3.8](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.8.zip)), copy the folder `SkypeNotification@chrisss404.gmail.com` from the downloaded archive to `~/.local/share/gnome-shell/extensions/`, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
 
 #### Dependencies:
     
@@ -49,8 +49,8 @@ Completely remove the extension by executing (`rm -rf ~/.local/share/gnome-shell
 
 ### Screenshots
 
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/screenshot1.jpg)
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/screenshot2.jpg)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.8/data/screenshot1.jpg)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.8/data/screenshot2.jpg)
 
 ----
 

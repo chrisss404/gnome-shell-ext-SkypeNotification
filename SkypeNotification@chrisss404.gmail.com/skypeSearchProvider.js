@@ -90,21 +90,7 @@ const SkypeSearchProvider = new Lang.Class({
             result = result.concat(tmp[i]);
         }
 
-        if(typeof this.searchSystem === "object") {
-            //Gnome 3.8
-            if(typeof this.searchSystem.pushResults === "function") {
-                this.searchSystem.pushResults(this, result);
-            }
-            //Gnome 3.10
-            if(typeof this.searchSystem.setResults === "function") {
-                this.searchSystem.setResults(this, result);
-            }
-        }
-        
-        //Gnome 3.12
-        if(typeof callback === "function") {
-            callback(result);
-        }
+        this.searchSystem.pushResults(this, result);
     },
 
     filterResults: function(results, maxNumber) {

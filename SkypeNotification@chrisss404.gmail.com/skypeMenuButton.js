@@ -156,14 +156,7 @@ const SkypeMenuButton = new Lang.Class({
             let checked = status === curStatus;
             let menuItem = this._statusMenuItems[status];
 
-            //Gnome 3.8
-            if(typeof menuItem.setShowDot === "function") {
-            	menuItem.setShowDot(checked);
-            }
-            //Gnome 3.10 & newer
-            if(typeof menuItem.setOrnament === "function") {
-            	menuItem.setOrnament(checked);
-            }
+            menuItem.setShowDot(checked);
         }
     },
 
