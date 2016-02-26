@@ -49,9 +49,9 @@ Completely remove the extension by executing (`rm -rf ~/.local/share/gnome-shell
 
 ### Screenshots
 
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/screenshot1.jpg)
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/screenshot2.jpg)
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/settings.png)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.14/data/screenshot1.jpg)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.14/data/screenshot2.jpg)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.14/data/settings.png)
 
 ----
 
