@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SkypeNotification@chrisss 404.gmail.com\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-26 17:07+0100\n"
+"POT-Creation-Date: 2016-02-26 18:55+0100\n"
 "PO-Revision-Date: 2015-06-11 12:35+0200\n"
 "Last-Translator: Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail."
 "com>\n"
@@ -136,51 +136,43 @@ msgstr "{contact} сутра слави рођендан"
 msgid "Happy Birthday {contact}"
 msgstr "Срећан рођендан {contact}"
 
-#: ../prefs.js:68
+#: ../prefs.js:67
 msgid "Show top bar icon"
 msgstr "Прикажи иконицу у горњој траци"
 
-#: ../prefs.js:77 ../prefs.js:78
+#: ../prefs.js:76 ../prefs.js:77
 msgid "Shall the top bar icon be displayed"
 msgstr "Подешава приказ иконице у горњој траци"
 
-#: ../prefs.js:93
-msgid "Hide original tray icon (restart required)"
-msgstr ""
-
-#: ../prefs.js:102 ../prefs.js:103
-msgid "Shall the original tray icon be hidden"
-msgstr ""
-
-#: ../prefs.js:118
+#: ../prefs.js:92
 msgid "Native notifications"
 msgstr "Системска обавештења"
 
-#: ../prefs.js:127 ../prefs.js:128
+#: ../prefs.js:101 ../prefs.js:102
 msgid "Shall Skype make use of native notifications"
 msgstr "Подешава да ли Скајп треба да користи системска обавештења"
 
-#: ../prefs.js:143
+#: ../prefs.js:117
 msgid "Search provider"
 msgstr ""
 
-#: ../prefs.js:152 ../prefs.js:153
+#: ../prefs.js:126 ../prefs.js:127
 msgid "Shall a Skype search provider be added"
 msgstr ""
 
-#: ../prefs.js:168
+#: ../prefs.js:142
 msgid "Follow system-wide presence state"
 msgstr "Прати системско стање присутности"
 
-#: ../prefs.js:177 ../prefs.js:178
+#: ../prefs.js:151 ../prefs.js:152
 msgid "Shall Skype online status follow the system-wide presence state"
 msgstr "Подешава да ли Скајп треба да користи системско стање присутности"
 
-#: ../prefs.js:193
+#: ../prefs.js:167
 msgid "Open contacts on left click on top bar icon"
 msgstr "Прикажи контакте када се кликне левим кликом на иконицу у горњој траци"
 
-#: ../prefs.js:202 ../prefs.js:203
+#: ../prefs.js:176 ../prefs.js:177
 msgid ""
 "Shall the Skype contact list be opened when the top bar icon is clicked by "
 "the left mouse button"

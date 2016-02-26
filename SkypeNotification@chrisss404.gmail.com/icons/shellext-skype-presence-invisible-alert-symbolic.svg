@@ -1,9 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1"
-	 sodipodi:docname="shellext-skype-presence-invisible-alert-symbolic.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="240px" height="240px"
-	 viewBox="0 0 240 240" xml:space="preserve">
-<title>Skype Symbolic Icon Theme</title>
-<path fill="#bebebe" d="m 174.71625,240 c -14.09788,-0.28768 -27.01368,-9.16751 -41.3503,-6.51246 C 108.87233,235.10616 83.265226,231.27913 62.558402,217.3042 25.738093,194.60055 2.4390025,150.60528 7.3894139,107.19262 8.4945755,98.194819 7.1116863,89.1457 2.9020251,81.135765 -7.6823649,50.24924 11.837571,13.726439 42.755429,4.1044321 c 15.7648,-6.5374848 34.036704,-5.06976319 48.919941,3.0101398 13.71451,3.0236371 27.75752,-2.1530011 41.58021,0.6328639 58.68237,5.4675582 105.69556,63.9675852 99.44383,122.4343642 -1.22557,10.05905 0.1845,20.2199 4.68458,29.31774 10.25604,31.85845 -10.7747,69.57974 -43.34263,77.45897 -6.25832,1.8966 -12.78112,3.01364 -19.32511,3.04149 z m -1.48988,-27.15539 c 18.66391,2.40302 37.0809,-12.39936 38.87298,-31.12634 2.71339,-12.15495 -5.52094,-22.43482 -6.71905,-34.00188 -1.89463,-19.47073 4.0208,-39.98467 -4.8042,-58.451606 C 190.69385,62.028108 166.10112,41.165613 137.96908,35.01264 120.02024,30.706213 101.44665,37.684636 83.661209,31.977081 70.170004,26.00973 53.467067,23.656554 41.355267,34.16156 25.681429,46.019769 24.08164,69.274319 33.58919,85.492378 c 4.632176,21.742912 -3.655389,44.967742 6.1335,65.855952 10.448127,27.48218 35.897921,47.87654 64.39533,53.83631 18.05403,3.22843 36.84582,-3.15129 54.51863,3.37638 4.87659,1.38248 9.68667,2.99361 14.58972,4.28359 z"/>
-<path fill="#f57900" class="warning" d="M133,121c-7,0-13,6-13,13v93c0,7,6,13,13,13h94c7,0,13-6,13-13v-93c0-7-6-13-13-13H133z M165,136h30v60h-30V136z M165,210h30v15h-30V210z"/>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" sodipodi:docname="shellext-skype-presence-invisible-alert-symbolic.svg" inkscape:version="0.48.5 r10040" x="0px" y="0px" width="24px" height="24px" viewBox="-402.5 403.5 24 24" enable-background="new -402.5 403.5 24 24" xml:space="preserve">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>
+          Skype Symbolic Icon Theme
+        </dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title>
+    Skype Symbolic Icon Theme
+  </title>
+  <defs>
+    <clipPath id="clipPath3042">
+      <path d="m101 277 0 16 7 0L108 284.8c0-0.42 0.41-0.8 0.8-0.8l8.2 0L117 277z" inkscape:connector-curvature="0"/>
+    </clipPath>
+  </defs>
+  <g inkscape:label="status" transform="translate(-101,-277)" inkscape:groupmode="layer">
+    <path inkscape:connector-curvature="0" d="m 117,289 q 0,1.66 -1.17,2.83 -1.17,1.17 -2.83,1.17 -1.61,0 -2.77,-1.11 -0.64,0.11 -1.23,0.11 -1.42,0 -2.72,-0.55 -1.3,-0.55 -2.23,-1.49 -0.94,-0.94 -1.49,-2.23 Q 102,286.42 102,285 q 0,-0.58 0.11,-1.23 Q 101,282.61 101,281 q 0,-1.66 1.17,-2.83 1.17,-1.17 2.83,-1.17 1.61,0 2.77,1.11 0.64,-0.11 1.23,-0.11 1.42,0 2.72,0.55 1.3,0.55 2.23,1.49 0.94,0.94 1.49,2.23 0.56,1.31 0.56,2.73 0,0.59 -0.11,1.23 1.11,1.16 1.11,2.77 z m -2,-4 q 0,-1.62 -0.8,-3.01 -0.8,-1.38 -2.19,-2.19 -1.38,-0.8 -3.01,-0.8 -0.8,0 -1.59,0.22 -0.42,-0.56 -1.05,-0.89 Q 105.72,278 105,278 q -1.25,0 -2.12,0.88 -0.88,0.89 -0.88,2.12 0,0.72 0.33,1.35 0.33,0.63 0.89,1.05 -0.22,0.8 -0.22,1.6 0,1.63 0.8,3.01 0.8,1.38 2.19,2.19 1.39,0.8 3.01,0.8 0.8,0 1.59,-0.22 0.42,0.56 1.05,0.89 0.63,0.33 1.36,0.33 1.23,0 2.12,-0.87 0.88,-0.88 0.88,-2.13 0,-0.72 -0.33,-1.35 -0.33,-0.63 -0.89,-1.05 0.22,-0.8 0.22,-1.6 z" clip-path="url(#clipPath3042)" transform="matrix(1.4981273,0,0,1.4990631,-452.81086,265.25953)" style="fill:#bebebe"/>
+    <path d="m -288.19663,692.59744 c -0.73408,0 -1.30337,0.56964 -1.30337,1.30418 l 0,9.2942 c 0,0.73454 0.56929,1.30418 1.31835,1.30418 l 9.3633,0 c 0.73408,0 1.31835,-0.56964 1.31835,-1.30418 l 0,-9.2942 c 0,-0.73454 -0.56929,-1.30418 -1.30337,-1.30418 l -9.3633,0 z m 3.19101,1.48407 2.99626,0 0,5.95128 -2.99626,0 0,-5.95128 z m 0,7.43535 2.99626,0 0,1.48408 -2.99626,0 0,-1.48408 z" inkscape:connector-curvature="0" class="warning" style="fill:#f57900"/>
+  </g>
+  <g inkscape:label="devices" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="apps" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="actions" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="places" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="mimetypes" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="emblems" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="categories" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
 </svg>

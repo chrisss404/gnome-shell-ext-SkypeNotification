@@ -7,11 +7,6 @@
             <summary>Show top bar icon</summary>
             <description>Shall the top bar icon be displayed</description>
         </key>
-        <key name="destroy-original-tray-icon" type="b">
-            <default>true</default>
-            <summary>Hide original tray icon</summary>
-            <description>Shall the original tray icon be hidden</description>
-        </key>
         <key name="native-notifications" type="b">
             <default>true</default>
             <summary>Native notifications</summary>

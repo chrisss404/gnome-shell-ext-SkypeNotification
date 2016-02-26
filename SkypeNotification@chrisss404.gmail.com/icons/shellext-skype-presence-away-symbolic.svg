@@ -1,9 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1"
-	 sodipodi:docname="shellext-skype-presence-away-symbolic.svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="240px" height="240px"
-	 viewBox="0 0 240 240" xml:space="preserve">
-<title>Skype Symbolic Icon Theme</title>
-<path fill="#bebebe" d="m 174.71625,240 c -14.09788,-0.28768 -27.01368,-9.16751 -41.3503,-6.51246 C 108.87233,235.10616 83.265226,231.27913 62.558402,217.3042 25.738093,194.60055 2.4390025,150.60528 7.3894139,107.19262 8.4945755,98.194819 7.1116863,89.1457 2.9020251,81.135765 -7.6823649,50.24924 11.837571,13.726439 42.755429,4.1044321 c 15.7648,-6.5374848 34.036704,-5.06976319 48.919941,3.0101398 13.71451,3.0236371 27.75752,-2.1530011 41.58021,0.6328639 58.68237,5.4675582 105.69556,63.9675852 99.44383,122.4343642 -1.22557,10.05905 0.1845,20.2199 4.68458,29.31774 10.25604,31.85845 -10.7747,69.57974 -43.34263,77.45897 -6.25832,1.8966 -12.78112,3.01364 -19.32511,3.04149 z m -1.48988,-27.15539 c 18.66391,2.40302 37.0809,-12.39936 38.87298,-31.12634 2.71339,-12.15495 -5.52094,-22.43482 -6.71905,-34.00188 -1.89463,-19.47073 4.0208,-39.98467 -4.8042,-58.451606 C 190.69385,62.028108 166.10112,41.165613 137.96908,35.01264 120.02024,30.706213 101.44665,37.684636 83.661209,31.977081 70.170004,26.00973 53.467067,23.656554 41.355267,34.16156 25.681429,46.019769 24.08164,69.274319 33.58919,85.492378 c 4.632176,21.742912 -3.655389,44.967742 6.1335,65.855952 10.448127,27.48218 35.897921,47.87654 64.39533,53.83631 18.05403,3.22843 36.84582,-3.15129 54.51863,3.37638 4.87659,1.38248 9.68667,2.99361 14.58972,4.28359 z"/>
-<path fill="#bebebe" d="m 151.12286,168.594 c -8.71736,0.34718 -15.02922,-6.51341 -20.73654,-12.13066 -8.91854,-9.6056 -17.70433,-19.33738 -26.56646,-28.99634 -1.54728,-2.36543 -0.61078,-5.39196 -0.868,-8.08798 0.11281,-13.53469 -0.28969,-27.084068 0.34513,-40.60665 0.42547,-7.147447 4.17487,-14.168192 10.51617,-17.733352 5.27739,-3.089833 12.30837,-1.716168 16.57027,2.517072 4.72185,3.620732 7.36455,9.362941 7.4141,15.276302 0.5532,11.498877 0.19861,23.020898 0.28633,34.530608 7.45645,7.68008 15.3607,14.95269 22.33038,23.08537 4.07838,5.17286 7.9259,11.39412 6.90108,18.28518 -0.23099,5.82714 -3.89155,11.67024 -9.8199,13.02778 -2.07388,0.55768 -4.22596,0.82673 -6.37256,0.83267 z" />
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" sodipodi:docname="shellext-skype-presence-away-symbolic.svg" inkscape:version="0.48.5 r10040" x="0px" y="0px" width="24px" height="24px" viewBox="-402.5 403.5 24 24" enable-background="new -402.5 403.5 24 24" xml:space="preserve">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>
+          Skype Symbolic Icon Theme
+        </dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title>
+    Skype Symbolic Icon Theme
+  </title>
+  <g inkscape:label="status" transform="translate(-101,-277)" inkscape:groupmode="layer">
+    <path inkscape:connector-curvature="0" d="m -277.5,698.5 q 0,2.49 -1.755,4.245 -1.755,1.755 -4.245,1.755 -2.415,0 -4.155,-1.665 -0.96,0.165 -1.845,0.165 -2.13,0 -4.08,-0.825 -1.95,-0.825 -3.345,-2.235 -1.41,-1.41 -2.235,-3.345 -0.84,-1.965 -0.84,-4.095 0,-0.885 0.165,-1.845 -1.665,-1.74 -1.665,-4.155 0,-2.49 1.755,-4.245 1.755,-1.755 4.245,-1.755 2.415,0 4.155,1.665 0.96,-0.165 1.845,-0.165 2.13,0 4.08,0.825 1.95,0.825 3.345,2.235 1.41,1.41 2.235,3.345 0.825,1.95 0.825,4.08 0,0.885 -0.165,1.845 1.68,1.755 1.68,4.17 z m -6.795,-4.455 L -288,691.63 V 688 q 0,-0.615 -0.45,-1.05 -0.435,-0.45 -1.065,-0.45 -0.615,0 -1.05,0.45 Q -291,687.385 -291,688 v 4.5 0.03 0.03 q -0.03,0.96 0.795,1.41 l 4.335,2.835 q 0.57,0.33 1.2,0.165 0.63,-0.165 0.96,-0.735 0.33,-0.57 0.15,-1.2 -0.18,-0.63 -0.735,-0.96 z" style="fill:#bebebe"/>
+  </g>
+  <g inkscape:label="devices" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="apps" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="actions" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="places" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="mimetypes" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="emblems" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
+  <g inkscape:label="categories" transform="translate(-101,-277)" inkscape:groupmode="layer"/>
 </svg>

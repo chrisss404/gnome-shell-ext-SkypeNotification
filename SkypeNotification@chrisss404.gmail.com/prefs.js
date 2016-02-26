@@ -27,7 +27,6 @@ const Me = imports.misc.extensionUtils.getCurrentExtension();
 const _ = imports.gettext.domain(Me.uuid).gettext;
 
 const SETTINGS_SHOW_PANEL_BUTTON_KEY = "show-top-bar-icon";
-const SETTINGS_DESTROY_ORIGINAL_TRAY_ICON_KEY = "destroy-original-tray-icon";
 const SETTINGS_NATIVE_NOTIFICATIONS_KEY = "native-notifications";
 const SETTINGS_ENABLE_SEARCH_PROVIDER_KEY = "search-provider";
 const SETTINGS_FOLLOW_SYSTEM_WIDE_PRESENCE_KEY = "follow-system-wide-presence";
@@ -79,31 +78,6 @@ function buildPrefsWidget() {
 
     hbox.pack_start(showIconSwitch, false, false, 10);
     hbox.add(showIconLabel);
-
-    frame.pack_start(hbox, false, false, 10);
-
-
-    let hbox = new Gtk.Box({
-        orientation: Gtk.Orientation.HORIZONTAL
-    });
-
-    let hideTrayIconLabel = new Gtk.Label({
-        xalign: 0
-    });
-    hideTrayIconLabel.set_markup("<span size='medium'><b>" + _("Hide original tray icon (restart required)") + "</b></span>");
-
-    let hideTrayIconSwitch = new Gtk.Switch({
-        active: settings.get_boolean(SETTINGS_DESTROY_ORIGINAL_TRAY_ICON_KEY)
-    });
-    hideTrayIconSwitch.connect("notify::active", function(button) {
-        settings.set_boolean(SETTINGS_DESTROY_ORIGINAL_TRAY_ICON_KEY, button.active);
-    });
-
-    hideTrayIconLabel.set_tooltip_text(_("Shall the original tray icon be hidden"));
-    hideTrayIconSwitch.set_tooltip_text(_("Shall the original tray icon be hidden"));
-
-    hbox.pack_start(hideTrayIconSwitch, false, false, 10);
-    hbox.add(hideTrayIconLabel);
 
     frame.pack_start(hbox, false, false, 10);
 
