@@ -374,7 +374,7 @@ const Skype = new Lang.Class({
         let recent = this._getRecentChats();
         if(recent.length > 0) {
             this._proxy.InvokeRemote("OPEN CHAT " + recent[0]["chat"]);
-            this._focusWindow(this._focusSkypeChatWindow);
+            this._focusWindow(Lang.bind(this, this._focusSkypeChatWindow));
         }
     },
 
