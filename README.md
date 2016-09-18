@@ -19,7 +19,7 @@ This extension simplifies the life for Microsoft Skype users. It makes use of th
 There are two possibilities:
 
 - Visit the [Skype Integration page](https://extensions.gnome.org/extension/696/skype-integration/) on extensions.gnome.org, click on the switch ("OFF" => "ON"), click on the install button.
-- Or, download the source ([3.6](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.6.zip), [3.8](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.8.zip), [3.10](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.10.zip), [3.12](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.12.zip), [3.14](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.14.zip), [3.16, 3.18, 3.20](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/master.zip)), copy the folder `SkypeNotification@chrisss404.gmail.com` from the downloaded archive to `~/.local/share/gnome-shell/extensions/`, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
+- Or, download the source ([3.6](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.6.zip), [3.8](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.8.zip), [3.10](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.10.zip), [3.12](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.12.zip), [3.14](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.14.zip), [3.16](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.16.zip), [3.18, 3.20, 3.22](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/master.zip)), copy the folder `SkypeNotification@chrisss404.gmail.com` from the downloaded archive to `~/.local/share/gnome-shell/extensions/`, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
 
 #### Dependencies:
     
@@ -49,6 +49,14 @@ Make sure that you have installed Python D-Bus bindings. You can check by execut
 #### Can't install anymore after recent update, what shall I do?
 
 Completely remove the extension by executing (`rm -rf ~/.local/share/gnome-shell/extensions/SkypeNotification@chrisss404.gmail.com`), restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and reinstall it ([initial question](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/issues/17)).
+
+----
+
+### Known Issues
+
+#### Group chats are missing
+
+Most group chats are invisible, as they are not supported by the very outdated API. For more information see ([luord's comment](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/issues/69)).
 
 ----
 
