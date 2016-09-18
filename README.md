@@ -62,9 +62,9 @@ Most group chats are invisible, as they are not supported by the very outdated A
 
 ### Screenshots
 
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/screenshot1.jpg)
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/screenshot2.jpg)
-![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/master/data/settings.png)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.16/data/screenshot1.jpg)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.16/data/screenshot2.jpg)
+![Screenshot](https://raw.github.com/chrisss404/gnome-shell-ext-SkypeNotification/3.16/data/settings.png)
 
 ----
 
