@@ -1,6 +1,8 @@
-## GNOME Shell Skype Integration
+## GNOME Shell Skype Integration - DISCONTINUED
 
-This extension simplifies the life for Microsoft Skype users. It makes use of the [Skype API](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/raw/master/docs/Skype%20Developer%20-%20Skype%20Desktop%20API%20Reference%20Manual.pdf), which is unfortunately no longer supported, but still works with Skype version ~~4.2.0.11, 4.2.0.13, and~~[¹](http://community.skype.com/t5/Linux/Having-trouble-signing-in-Retirement-of-older-versions-of-Skype/td-p/3439685) 4.3.0.37.
+This extension simplifies the life for Microsoft Skype users. It makes use of the [Skype API](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/raw/master/docs/Skype%20Developer%20-%20Skype%20Desktop%20API%20Reference%20Manual.pdf), which is unfortunately no longer supported, but still works with Skype version ~~4.2.0.11, 4.2.0.13, and~~[¹](http://community.skype.com/t5/Linux/Having-trouble-signing-in-Retirement-of-older-versions-of-Skype/td-p/3439685) 4.3.0.37. 
+
+The extension is discontinued due to the fact that the last version with API support (4.3.0.37) is no longer distributed by Microsoft. As of first of march only the new edition named SkypeForLinux is available at the [official download page](https://www.skype.com/en/download-skype/skype-for-computer/), which unfortunately lacks API support.
 
 
 #### Integrated features:
@@ -19,7 +21,7 @@ This extension simplifies the life for Microsoft Skype users. It makes use of th
 There are two possibilities:
 
 - Visit the [Skype Integration page](https://extensions.gnome.org/extension/696/skype-integration/) on extensions.gnome.org, click on the switch ("OFF" => "ON"), click on the install button.
-- Or, download the source ([3.6](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.6.zip), [3.8](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.8.zip), [3.10](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.10.zip), [3.12](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.12.zip), [3.14](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.14.zip), [3.16](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.16.zip), [3.18, 3.20, 3.22](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/master.zip)), copy the folder `SkypeNotification@chrisss404.gmail.com` from the downloaded archive to `~/.local/share/gnome-shell/extensions/`, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
+- Or, download the source ([3.6](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.6.zip), [3.8](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.8.zip), [3.10](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.10.zip), [3.12](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.12.zip), [3.14](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.14.zip), [3.16](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/3.16.zip), [3.18, 3.20, 3.22, 3.24](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/master.zip)), copy the folder `SkypeNotification@chrisss404.gmail.com` from the downloaded archive to `~/.local/share/gnome-shell/extensions/`, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
 
 #### Dependencies:
     
