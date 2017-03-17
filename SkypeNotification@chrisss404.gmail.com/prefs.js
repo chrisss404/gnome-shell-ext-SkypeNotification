@@ -60,7 +60,7 @@ function buildPrefsWidget() {
     });
 
 
-    let hbox = new Gtk.Box({
+    let showIconHbox = new Gtk.Box({
         orientation: Gtk.Orientation.HORIZONTAL
     });
 
@@ -80,13 +80,13 @@ function buildPrefsWidget() {
     showIconLabel.set_tooltip_text(_("Shall the top bar icon be displayed"));
     showIconSwitch.set_tooltip_text(_("Shall the top bar icon be displayed"));
 
-    hbox.pack_start(showIconSwitch, false, false, 10);
-    hbox.add(showIconLabel);
+    showIconHbox.pack_start(showIconSwitch, false, false, 10);
+    showIconHbox.add(showIconLabel);
 
-    frame.pack_start(hbox, false, false, 10);
+    frame.pack_start(showIconHbox, false, false, 10);
 
 
-    let hbox = new Gtk.Box({
+    let hideTrayIconHbox = new Gtk.Box({
         orientation: Gtk.Orientation.HORIZONTAL
     });
 
@@ -106,13 +106,13 @@ function buildPrefsWidget() {
     hideTrayIconLabel.set_tooltip_text(_("Shall the original tray icon be hidden"));
     hideTrayIconSwitch.set_tooltip_text(_("Shall the original tray icon be hidden"));
 
-    hbox.pack_start(hideTrayIconSwitch, false, false, 10);
-    hbox.add(hideTrayIconLabel);
+    hideTrayIconHbox.pack_start(hideTrayIconSwitch, false, false, 10);
+    hideTrayIconHbox.add(hideTrayIconLabel);
 
-    frame.pack_start(hbox, false, false, 10);
+    frame.pack_start(hideTrayIconHbox, false, false, 10);
 
 
-    let hbox = new Gtk.Box({
+    let nativeNotificationsHbox = new Gtk.Box({
         orientation: Gtk.Orientation.HORIZONTAL
     });
 
@@ -132,13 +132,13 @@ function buildPrefsWidget() {
     nativeNotificationsLabel.set_tooltip_text(_("Shall Skype make use of native notifications"));
     nativeNotificationsSwitch.set_tooltip_text(_("Shall Skype make use of native notifications"));
 
-    hbox.pack_start(nativeNotificationsSwitch, false, false, 10);
-    hbox.add(nativeNotificationsLabel);
+    nativeNotificationsHbox.pack_start(nativeNotificationsSwitch, false, false, 10);
+    nativeNotificationsHbox.add(nativeNotificationsLabel);
 
-    frame.pack_start(hbox, false, false, 10);
+    frame.pack_start(nativeNotificationsHbox, false, false, 10);
 
 
-    let hbox = new Gtk.Box({
+    let enableSearchProviderHbox = new Gtk.Box({
         orientation: Gtk.Orientation.HORIZONTAL
     });
 
@@ -158,13 +158,13 @@ function buildPrefsWidget() {
     enableSearchProviderLabel.set_tooltip_text(_("Shall a Skype search provider be added"));
     enableSearchProviderSwitch.set_tooltip_text(_("Shall a Skype search provider be added"));
 
-    hbox.pack_start(enableSearchProviderSwitch, false, false, 10);
-    hbox.add(enableSearchProviderLabel);
+    enableSearchProviderHbox.pack_start(enableSearchProviderSwitch, false, false, 10);
+    enableSearchProviderHbox.add(enableSearchProviderLabel);
 
-    frame.pack_start(hbox, false, false, 10);
+    frame.pack_start(enableSearchProviderHbox, false, false, 10);
 
 
-    let hbox = new Gtk.Box({
+    let onLeftClickHbox = new Gtk.Box({
         orientation: Gtk.Orientation.HORIZONTAL
     });
 
@@ -184,13 +184,13 @@ function buildPrefsWidget() {
     onLeftClickLabel.set_tooltip_text(_("Shall the Skype contact list be opened when the top bar icon is clicked by the left mouse button"));
     onLeftClickSwitch.set_tooltip_text(_("Shall the Skype contact list be opened when the top bar icon is clicked by the left mouse button"));
 
-    hbox.pack_start(onLeftClickSwitch, false, false, 10);
-    hbox.add(onLeftClickLabel);
+    onLeftClickHbox.pack_start(onLeftClickSwitch, false, false, 10);
+    onLeftClickHbox.add(onLeftClickLabel);
 
-    frame.pack_start(hbox, false, false, 10);
+    frame.pack_start(onLeftClickHbox, false, false, 10);
 
 
-    let hbox = new Gtk.Box({
+    let panelOrderHbox = new Gtk.Box({
         orientation: Gtk.Orientation.HORIZONTAL
     });
 
@@ -210,10 +210,10 @@ function buildPrefsWidget() {
     panelOrderLabel.set_tooltip_text(_("Define panel button's position"));
     panelOrderSpinButton.set_tooltip_text(_("Define panel button's position"));
 
-    hbox.pack_start(panelOrderSpinButton, false, false, 10);
-    hbox.add(panelOrderLabel);
+    panelOrderHbox.pack_start(panelOrderSpinButton, false, false, 10);
+    panelOrderHbox.add(panelOrderLabel);
 
-    frame.pack_start(hbox, false, false, 10);
+    frame.pack_start(panelOrderHbox, false, false, 10);
 
 
     frame.show_all();
