@@ -56,7 +56,7 @@ Completely remove the extension by executing (`rm -rf ~/.local/share/gnome-shell
 
 #### Group chats are missing
 
-Most group chats are invisible, as they are not supported by the very outdated API. For more information see ([luord's comment](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/issues/69)).
+Most group chats are invisible, as they are not supported by the very outdated API. For more information see [luord's comment](https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/issues/69).
 
 ----
 

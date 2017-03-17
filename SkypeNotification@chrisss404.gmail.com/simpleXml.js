@@ -74,7 +74,7 @@ const SimpleXML = new Lang.Class({
             return undefined;
         }
         for(let index in root.data) {
-            if(root.data[index].name == name) {
+            if(typeof root.data[index] === "object" && root.data[index].name == name) {
                 return root.data[index]; 
             }
         }

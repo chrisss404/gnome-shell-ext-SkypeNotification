@@ -171,12 +171,13 @@ const SkypeConfig = new Lang.Class({
     _set: function(params) {
         let [xml, toggle, notify, enalbe, script, ntag, stag, preset] = params;
 
-        let script = this._get(xml, script, stag, "");
+        script = this._get(xml, script, stag, "");
         script.data = [ 'python ' + Me.path + '/notify.py -e"%type" -n"%sname" -f"%fname" -p"%fpath" -m"%smessage" -s"%fsize" -u"%sskype"' ];
         let ntagElement = this._get(xml, notify, ntag, preset);
         let stagElement = this._get(xml, enalbe, stag, preset);
 
-        let active = (parseInt(ntagElement.data) == 1 || parseInt(stagElement.data) == 1);
+        let active = (typeof ntagElement.data === "object" && parseInt(ntagElement.data) == 1 || 
+                      typeof stagElement.data === "object" && parseInt(stagElement.data) == 1);
         if(toggle) {
             if(active) {
                 ntagElement.data = [0];

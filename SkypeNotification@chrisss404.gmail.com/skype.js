@@ -224,7 +224,7 @@ const Skype = new Lang.Class({
         // SKYPEVERSION 171 ... Client: 4.2.0.13
         // SKYPEVERSION 171 ... Client: 4.2.0.11
 
-        if(answer == null) {
+        if(answer == null || answer == "") {
             this._active = false;
             if(this._skypeMenu != null) {
                 this._skypeMenu.destroy();
@@ -305,7 +305,7 @@ const Skype = new Lang.Class({
                 Lang.bind(this, this._onSettingsChanged));
 
         let messageList = Main.panel.statusArea.dateMenu._messageList;
-        if(typeof messageList === "object") {
+        if(typeof messageList === "object" && typeof messageList._notificationSection === "object" && typeof messageList._notificationSection._closeButton === "object") {
             this._notificationSectionCloseSignal = messageList._notificationSection._closeButton.connect("clicked", Lang.bind(this, this._onCloseNotificationSection));
         }
 

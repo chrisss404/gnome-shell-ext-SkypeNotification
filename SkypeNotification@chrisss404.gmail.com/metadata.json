@@ -1,5 +1,5 @@
 {
-    "shell-version": ["3.18", "3.20", "3.22"],
+    "shell-version": ["3.18", "3.20", "3.22", "3.24"],
     "settings-schema": "org.gnome.shell.extensions.skype-integration", 
     "uuid": "SkypeNotification@chrisss404.gmail.com", 
     "name": "Skype Integration", 
