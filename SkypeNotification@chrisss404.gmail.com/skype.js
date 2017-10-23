@@ -81,7 +81,7 @@ const SETTINGS_PANEL_BUTTON_POSITION_KEY = "panel-button-position";
 const SETTINGS_IS_FIRST_RUN_KEY = "is-first-run";
 
 
-const Skype = new Lang.Class({
+var Skype = new Lang.Class({
     Name: "Skype",
 
     _init: function() {
@@ -98,7 +98,6 @@ const Skype = new Lang.Class({
         this._skypeMenuAlert = false;
         this._skypeMostRecentNotificationContactId = "";
         this._skypeMenuEnabled = true;
-        this._skypeHideOriginalTrayIcon = true;
         this._skypeNativeNotifications = true;
         this._skypeSearchProviderEnabled = true;
         this._showContactsOnLeftClick = false;
@@ -138,7 +137,6 @@ const Skype = new Lang.Class({
 
         this._settings = new Gio.Settings({ settings_schema: schemaObj });
         this._skypeMenuEnabled = this._settings.get_boolean(SETTINGS_SHOW_PANEL_BUTTON_KEY);
-        this._skypeHideOriginalTrayIcon = this._settings.get_boolean(SETTINGS_DESTROY_ORIGINAL_TRAY_ICON_KEY);
         this._skypeNativeNotifications = this._settings.get_boolean(SETTINGS_NATIVE_NOTIFICATIONS_KEY);
         this._skypeSearchProviderEnabled = this._settings.get_boolean(SETTINGS_ENABLE_SEARCH_PROVIDER_KEY);
         this._showContactsOnLeftClick = this._settings.get_boolean(SETTINGS_OPEN_CONTACTS_ON_LEFT_CLICK_KEY);
@@ -161,12 +159,6 @@ const Skype = new Lang.Class({
         if(!this._skypeMenuEnabled && this._skypeMenu != null) {
             this._skypeMenu.destroy();
             this._skypeMenu = null;
-        }
-
-
-        this._skypeHideOriginalTrayIcon = this._settings.get_boolean(SETTINGS_DESTROY_ORIGINAL_TRAY_ICON_KEY);
-        if(this._skypeHideOriginalTrayIcon) {
-            this._destroyOriginalTrayIcon();
         }
 
 
@@ -308,13 +300,6 @@ const Skype = new Lang.Class({
         if(typeof messageList === "object" && typeof messageList._notificationSection === "object" && typeof messageList._notificationSection._closeButton === "object") {
             this._notificationSectionCloseSignal = messageList._notificationSection._closeButton.connect("clicked", Lang.bind(this, this._onCloseNotificationSection));
         }
-
-        let trayManager = Main.legacyTray._trayManager;
-        if(typeof trayManager === "object") {
-            this._trayIconAddedSignal = trayManager.connect('tray-icon-added',
-                Lang.bind(this, this._onTrayIconAddedRemoveOriginalIcon));
-            this._destroyOriginalTrayIcon();
-        }
     },
 
     disable: function() {
@@ -339,10 +324,6 @@ const Skype = new Lang.Class({
         if(this._notificationSectionCloseSignal != null) {
             Main.panel.statusArea.dateMenu._messageList._notificationSection._closeButton.disconnect(this._notificationSectionCloseSignal);
             this._notificationSectionCloseSignal = null;
-        }
-        if(this._trayIconAddedSignal != null) {
-            Main.legacyTray._trayManager.disconnect(this._trayIconAddedSignal);
-            this._trayIconAddedSignal = null;
         }
     },
 
@@ -848,24 +829,6 @@ const Skype = new Lang.Class({
         return this._currentUserHandle;
     },
 
-    _destroyOriginalTrayIcon: function() {
-        let tray = Main.legacyTray;
-        let children = tray._iconBox.get_n_children();
-        for(let i = 0; i < children; i++) {
-            let button = tray._iconBox.get_child_at_index(0);
-            this._onTrayIconAddedRemoveOriginalIcon(Main.legacyTray._trayManager, button.child);
-        }
-    },
-
-    _onTrayIconAddedRemoveOriginalIcon: function(object, icon) {
-        if(this._skypeHideOriginalTrayIcon && icon.wm_class == "Skype") {
-            let button = icon.get_parent();
-            if(button != null) {
-                button.destroy();
-            }
-        }
-    },
-    
     _getMostRecentNotificationContactId: function() {
         if(this._skypeMenuAlert) {
             return this._skypeMostRecentNotificationContactId;

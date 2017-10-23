@@ -22,7 +22,7 @@
 const Gio = imports.gi.Gio;
 const Lang = imports.lang;
 
-const SimpleXML = new Lang.Class({
+var SimpleXML = new Lang.Class({
     Name: "SimpleXML",
 
     _init: function() {
@@ -41,7 +41,7 @@ const SimpleXML = new Lang.Class({
         let file = Gio.file_new_for_path(path);
         let contents = "";
         if(file.query_exists(null)) {
-            contents = file.load_contents(null, null);
+            contents = file.load_contents(null);
             contents = contents[1].toString();
         }
 

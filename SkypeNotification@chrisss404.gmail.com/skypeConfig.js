@@ -31,7 +31,7 @@ const SimpleXML = Me.imports.simpleXml.SimpleXML;
 const _ = imports.gettext.domain(Me.uuid).gettext;
 
 
-const SkypeConfig = new Lang.Class({
+var SkypeConfig = new Lang.Class({
     Name: "SkypeConfig",
 
     _init: function(skype, currentUserHandle) {

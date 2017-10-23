@@ -30,7 +30,7 @@ const Main = imports.ui.main;
 const Search = imports.ui.search;
 
 
-const SkypeSearchProvider = new Lang.Class({
+var SkypeSearchProvider = new Lang.Class({
     Name: "SkypeSearchProvider",
 
     _init: function(title, skype) {

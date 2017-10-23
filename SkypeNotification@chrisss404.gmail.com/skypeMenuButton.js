@@ -34,7 +34,7 @@ const PopupMenu = imports.ui.popupMenu;
 const _ = imports.gettext.domain(Me.uuid).gettext;
 
 
-const SkypeMenuButton = new Lang.Class({
+var SkypeMenuButton = new Lang.Class({
     Name: "SkypeMenuButton",
     Extends: PanelMenu.Button,
 
